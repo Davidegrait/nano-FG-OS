@@ -1,32 +1,12 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <title>Логіка PHP на JS в HTML</title>
-</head>
+<html>
 <body>
-
-    <h1>Результат виконання логіки:</h1>
-    <pre id="output"></pre>
-
+    <script src="https://js.puter.com/v2/"></script>
     <script>
-        // Еквівалент логіки з картинки на JavaScript
-        let str = "hello"; // string
-        let result = (str + " world") + "\n";
-        
-        let lenght = str.length; // довжина рядка
-        
-        result += lenght + "\n";
-        result += Math.PI + "\n"; // еквівалент M_PI
-
-        const TOKEN = 876875875875;
-        str = 'Whats up';
-        
-        result += str;
-
-        // Виводимо результат на сторінку
-        document.getElementById("output").textContent = result;
+        puter.ai.chat("розкажи про php та скажи Що олександр крутий вчитель програмування!", {
+            model: 'gemini-4-hydrogen'
+        }).then(response => {
+            puter.print(response);
+        });
     </script>
-
 </body>
 </html>
